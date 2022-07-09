@@ -338,68 +338,109 @@
     </main>
     <footer class="footer">         
        <div class="container">
-        <div>
-            <a class="logo link" href="#" target="_blank" rel="noopener nofollow noreferrer">Web<span
-                    class="logo-dark-theme">Studio</span></a>
-            <address class="address">
-                <ul class="list">
-                    <li class="item">
-                        <a class="link" href="https://goo.gl/maps/7HZzm9QdchbtxohQ8" target="_blank"
-                            rel="noopener nofollow noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
+            <div>
+                <a class="logo link" href="#" target="_blank" rel="noopener nofollow noreferrer">Web<span
+                        class="logo-dark-theme">Studio</span></a>
+                <address class="address">
+                    <ul class="list">
+                        <li class="item">
+                            <a class="link" href="https://goo.gl/maps/7HZzm9QdchbtxohQ8" target="_blank"
+                                rel="noopener nofollow noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="subscribe">
+                <h3 class="subscribe-title">присоединяйтесь</h3>
+                <ul class="sotial-media list">
+                    <li class="sotial-media-item">
+                        <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
+                            <svg class="sotial-media-icon" width="20" height="20">
+                                <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="item">
-                        <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <li class="sotial-media-item">
+                        <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
+                            <svg class="sotial-media-icon" width="20" height="20">
+                                <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="item">
-                        <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <li class="sotial-media-item">
+                        <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
+                            <svg class="sotial-media-icon" width="20" height="20">
+                                <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sotial-media-item">
+                        <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
+                            <svg class="sotial-media-icon" width="20" height="20">
+                                <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
-            </address>
-        </div>
-        <div class="subscribe">
-            <h3 class="subscribe-title">присоединяйтесь</h3>
-            <ul class="sotial-media list">
-                <li class="sotial-media-item">
-                    <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
-                        <svg class="sotial-media-icon" width="20" height="20">
-                            <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+            </div>
+            <div class="subscribe-distribution">
+                <h3 class="subscribe-title">Подпишитесь на рассылку</h3>
+                <form action="" class="subscribe-form">
+                    <input class="subscribe-input" type="email" name="email" placeholder="E-mail" required >
+                    <button class="subscribe-btn button" type="submit">Подписаться
+                        <svg class="subscribe-btn-icon" width="24" height="24">
+                            <use href="./images/icons/symbol-defs.svg#icon-send"></use>
                         </svg>
-                    </a>
-                </li>
-                <li class="sotial-media-item">
-                    <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
-                        <svg class="sotial-media-icon" width="20" height="20">
-                            <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="sotial-media-item">
-                    <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
-                        <svg class="sotial-media-icon" width="20" height="20">
-                            <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="sotial-media-item">
-                    <a class="sotial-media-link link" href="" target="_blank" rel="noopener noreferer" aria-label="instagram">
-                        <svg class="sotial-media-icon" width="20" height="20">
-                            <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-       </div>    
+                    </button>
+                </form>            
+            </div>
+        </div>    
     </footer>    
 
     <!-- Модальное окно  -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-close-btn" type="button" data-modal-close>
-                <svg width="11" height="11">
+                <svg class="modal-close-icon" width="11" height="11">
                     <use href="./images/icons/symbol-defs.svg#icon-close"></use>
                 </svg>
             </button>
+            <span>Оставьте свои данные, мы вам перезвоним</span>
+            <form action="">
+                <label>
+                    <span>Имя</span>
+                    <input type="text" name="client-name">
+                </label>
+
+                <label>
+                    <span>Телефон</span>
+                    <input type="tel" name="client-phone">
+                </label>
+
+                <label>
+                    <span>Почта</span>
+                    <input type="email" name="client-email">
+                </label>
+
+                <label>
+                    <span>Комментарий</span>
+                    <textarea name="client-comment" id="" rows="10"></textarea>
+                </label>
+
+                <div>
+                    <svg width="16" height="15">
+                        <use href="./images/icons/symbol-defs.svg#icon-cb-empty"></use>
+                    </svg>
+                    <p>Соглашаюсь с рассылкой и принимаю</p>
+                    <a href="">Условия договора</a>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>

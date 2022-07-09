@@ -6,6 +6,8 @@
     --bgd-scl: #F5F4FA;  
     --count-cards: 4;
     --dst-between: 30px;  
+
+    --animation-regular: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -76,8 +78,8 @@ p {
     padding: 10px 32px;
     min-width: 200px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-regular),
+    box-shadow var(--animation-regular);
 }
 
 .button:focus,
@@ -140,7 +142,7 @@ p {
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-regular);
 }
 
 .menu .item:not(:last-child) {
@@ -380,13 +382,13 @@ p {
     justify-content: center;   
     background-color: var(--third-color); 
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    transition: background-color var(--animation-regular);  
 }
 
 .sotial-media-icon {
     fill: #AFB1B8;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-regular);
 }
 
 .sotial-media-link:focus .sotial-media-icon,
@@ -429,8 +431,8 @@ p {
     align-items: center;
     justify-content: center;    
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);     
+    transition: color var(--animation-regular),
+    border-color var(--animation-regular);     
 }
 
 .clients-icon {
@@ -470,9 +472,9 @@ p {
     letter-spacing: 0.03em;
     min-width: auto;   
     
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-regular),
+    color var(--animation-regular),
+    box-shadow var(--animation-regular);
 }
 
 .portfolio .button:focus,
@@ -503,7 +505,7 @@ p {
     padding-bottom: 63px;
     padding-left: 24px;
 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--animation-regular);
 
     background-color: rgba(33, 150, 243, 0.9);
 }
@@ -528,7 +530,7 @@ p {
 
 .portfolio .table-item {    
     margin-bottom: 30px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--animation-regular);
 }
 
 .portfolio .table-item:focus,
@@ -633,6 +635,60 @@ p {
     background-color: var(--brand-color);
 }
 
+.subscribe-distribution {
+    width: 570px;
+    margin-left: auto;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-input {
+    margin-right: 12px;
+    padding: 15px 16px;
+    flex-grow: 2;
+
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    transition: color var(--animation-regular),
+    border-color var(--animation-regular);
+}
+
+.subscribe-input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;   
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input:not(:placeholder-shown):required:valid,
+.subscribe-input:hover,
+.subscribe-input:focus {    
+    color: var(--third-color);
+    border-color: var(--brand-color);
+}
+
+.subscribe-input:not(:placeholder-shown):required:invalid{
+    color: rgb(255, 64, 64);   
+}
+
+
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.subscribe-btn-icon {
+    margin-left: 10px;
+}
+
 /* modal window */
 .backdrop {
     position: fixed;
@@ -643,15 +699,15 @@ p {
 
     background-color: rgba(0, 0, 0, 0.2); 
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--animation-regular),
+    visibility var(--animation-regular);
 }
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 
     width: 528px;
     height: 581px;
@@ -677,12 +733,20 @@ p {
 
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--third-color);    
+    background-color: var(--third-color);     
 }
 
 .modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:focus {    
     cursor: pointer;
+}
+
+.modal-close-icon {   
+    transition: fill var(--animation-regular);
+}
+
+.modal-close-btn:hover .modal-close-icon{
+    fill: var(--brand-color);
 }
 
 .backdrop.is-hidden {
