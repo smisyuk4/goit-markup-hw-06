@@ -783,12 +783,14 @@ p {
     text-align: center;  
 }
 
+.modal-input-wrp {
+    position: relative;
+}
+
 .modal-form-label {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-
-    position: relative;
 }
 
 .modal-form-label:last-child {        
@@ -861,7 +863,6 @@ p {
 }
 
 .modal-form-checkbox {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -916,7 +917,17 @@ p {
     opacity: 1;
 }
 
+/* .form-checkbox-input:focus {
+    transform: translate(50%, 50%);
+    width: 50px;
+    height: 50px;
+    border: 1px solid red
+} */
+
+
+
 .modal-form-btn {
     display: block;
     margin: 0 auto;
 }
+
